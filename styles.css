@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at 80% 40%, #1e2a48 0%, #111827 100%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 4vw;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 410px;
+    max-width: 500px;
+    padding: 2vw 2vw 2vw 2vw;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.vehicle-no {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.vehicle-model {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #b5bcd0;
+}
+
+
+
+
+.owner-details {
+    margin-bottom: 40px;
+    margin-left: 6px;
+}
+
+.owner-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.owner-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.owner-vehicle {
+    font-size: 1.2rem;
+    color: #b5bcd0;
+    margin-top: 8px;
+}
+
+.owner-vehicle-no {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.contact-btn {
+    margin-top: 16px;
+    padding: 22px 48px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222;
+    background: linear-gradient(90deg, #a259f7 0%, #ff5c5c 100%);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(162,89,247,0.2);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 32px rgba(162,89,247,0.25);
+}
+
+.image-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    background: radial-gradient(circle, rgba(44, 73, 244, 0.4) 0%, rgba(44,73,244,0) 70%);
+    z-index: 0;
+}
+
+.car-img {
+    position: relative;
+    width: 440px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 40px;
+    background: #fff;
+    box-shadow: 0 0 64px 0 rgba(44,73,244,0.2);
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+        gap: 3vw;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4vw 0;
+    }
+    .image-section {
+        margin-top: 32px;
+    }
+}
+
+/* Compact mobile adjustments */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .container {
+        padding: 3vw 4vw;
+        gap: 4vw;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    .info-section {
+        min-width: unset;
+        max-width: 100%;
+        width: 100%;
+        padding: 2vw 2vw;
+        align-items: center;
+        text-align: center;
+    }
+    .header {
+        gap: 12px;
+        margin-bottom: 18px;
+        justify-content: center;
+    }
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+    .vehicle-no {
+        font-size: 1.4rem;
+    }
+    .vehicle-model {
+        font-size: 0.95rem;
+    }
+    .owner-details {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .owner-title, .owner-name {
+        font-size: 1.05rem;
+    }
+    .owner-vehicle, .owner-vehicle-no {
+        font-size: 0.95rem;
+    }
+    .contact-btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+        border-radius: 28px;
+    }
+    .image-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+    }
+    .image-glow {
+        border-radius: 20px;
+    }
+    .car-img {
+        width: 90%;
+        max-width: 360px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 0 36px 0 rgba(44,73,244,0.15);
+    }
+}
